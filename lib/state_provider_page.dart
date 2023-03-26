@@ -1,37 +1,39 @@
-import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+// // ignore_for_file: unused_local_variable
 
-final numberProvider = Provider<int>((ref) {
-  return 42;
-});
+// import 'package:flutter/material.dart';
+// import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final numberStateProvider = StateProvider<int>((ref) {
-  return 44;
-});
+// final numberProvider = Provider<int>((ref) {
+//   return 42;
+// });
 
-class StateProviderPage extends ConsumerWidget {
-  const StateProviderPage({Key? key}) : super(key: key);
+// final numberStateProvider = StateProvider<int>((ref) {
+//   return 44;
+// });
 
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final number = ref.watch(numberProvider);
-    final numberState = ref.watch(numberStateProvider);
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Provider: StateProvider'),
-      ),
-      body: Center(
-        child: Text(numberState.toString()),
-      ),
-      floatingActionButton: FloatingActionButton(
-        // backgroundColor: Colors.green,
-        onPressed: () => increment(ref),
-        child: const Icon(Icons.add),
-      ),
-    );
-  }
+// class StateProviderPage extends ConsumerWidget {
+//   const StateProviderPage({Key? key}) : super(key: key);
 
-  void increment(WidgetRef ref) {
-    ref.read(numberStateProvider.notifier).state++;
-  }
-}
+//   @override
+//   Widget build(BuildContext context, WidgetRef ref) {
+//     final number = ref.watch(numberProvider);
+//     final numberState = ref.watch(numberStateProvider);
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text('Provider: StateProvider'),
+//       ),
+//       body: Center(
+//         child: Text(numberState.toString()),
+//       ),
+//       floatingActionButton: FloatingActionButton(
+//         // backgroundColor: Colors.green,
+//         onPressed: () => increment(ref),
+//         child: const Icon(Icons.add),
+//       ),
+//     );
+//   }
+
+//   void increment(WidgetRef ref) {
+//     ref.read(numberStateProvider.notifier).state++;
+//   }
+// }

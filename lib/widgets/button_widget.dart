@@ -1,25 +1,21 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-class ButtonWidget extends StatelessWidget {
-  final String text;
-  final VoidCallback onClicked;
+// class ButtonWidget extends StatelessWidget {
+//   final String text;
+//   final VoidCallback onClicked;
 
-  const ButtonWidget({
-    required this.text,
-    required this.onClicked,
-    Key? key,
-  }) : super(key: key);
+//   const ButtonWidget({
+//     required this.text,
+//     required this.onClicked,
+//     Key? key,
+//   }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) => RaisedButton(
-        child: Text(
-          text,
-          style: TextStyle(fontSize: 24),
-        ),
-        shape: StadiumBorder(),
-        color: Theme.of(context).accentColor,
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        textColor: Colors.white,
-        onPressed: onClicked,
-      );
-}
+//   @override
+//   Widget build(BuildContext context) => ElevatedButton(
+//         onPressed: onClicked,
+//         child: Text(
+//           text,
+//           style: const TextStyle(fontSize: 24),
+//         ),
+//       );
+// }
